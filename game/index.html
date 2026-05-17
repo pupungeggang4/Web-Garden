@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rampaging flowers</title>
+        <style>
+            body {
+                touch-action: none;
+                overscroll-behavior: none;
+            }
+
+            #screen {
+                border: 2px solid black;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 96%;
+            }
+        </style>
+        <script type="importmap">
+            {
+                "imports": {
+                    "asset": "./script/asset.js",
+                    "gamevar": "./script/gamevar.js",
+                    "scene": "./script/scene.js",
+                    "scenetitle": "./script/scenetitle.js",
+                    "scriptselect": "./script/sceneselect.js",
+                    "scenebattle": "./script/scenebattle.js",
+                    "scenecollection": "./script/scenecollection.js",
+                    "gamehandler": "./script/gamehandler.js"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="screen" width="800" height="600"></canvas>
+        <script type="module" src="script/main.js"></script>
+    </body>
+</html>
