@@ -1,7 +1,10 @@
+import {UI} from 'ui'
+import {Util} from 'util'
+
 import {GameVar} from 'gamevar'
 import {Scene} from 'scene'
 
-export class SceneTitle {
+export class SceneTitle extends Scene {
     static update(gameVar) {
 
     }
@@ -14,15 +17,15 @@ export class SceneTitle {
         ctx.fillRect(0, 0, 80, 80)
     }
 
-    static pointerUp(gameVar) {
+    static pointerUp(gameVar, pos, button) {
+        gameVar.scene = 'select'
+    }
+
+    static keyDown(gameVar, key) {
 
     }
 
-    static keyDown(gameVar) {
-
-    }
-
-    static keyUp(gameVar) {
+    static keyUp(gameVar, key) {
 
     }
 }

@@ -7,7 +7,7 @@ document.getElementById('screen').oncontextmenu = rightClick
 
 function main() {
     let gameVar = new GameVar()
-    let gameHandler = new GameHandler()
+    let gameHandler = new GameHandler(gameVar)
     try {
         gameHandler.run(gameVar)
     } catch (error) {

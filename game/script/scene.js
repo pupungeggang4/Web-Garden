@@ -9,15 +9,15 @@ export class Scene {
 
     }
 
-    static pointerUp(gameVar) {
+    static pointerUp(gameVar, pos, button) {
 
     }
 
-    static keyDown(gameVar) {
+    static keyDown(gameVar, key) {
 
     }
 
-    static keyUp(gameVar) {
+    static keyUp(gameVar, key) {
 
     }
 }
