@@ -1,0 +1,20 @@
+{
+  "name": "rampaging_flowers",
+  "version": "1.0.0",
+  "description": "Card-based roguelite hack-n-slash game.",
+  "homepage": "https://github.com/pupungeggang4/Web-Garden#readme",
+  "bugs": {
+    "url": "https://github.com/pupungeggang4/Web-Garden/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pupungeggang4/Web-Garden.git"
+  },
+  "license": "MIT",
+  "author": "pupungeggang4",
+  "type": "commonjs",
+  "main": "game/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
