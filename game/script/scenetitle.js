@@ -26,6 +26,8 @@ export class SceneTitle extends Scene {
     static pointerUp(gameVar, pos, button) {
         if (Util.pointInsideRectUI(pos, UI.title.buttonStart)) {
             gameVar.scene = 'select'
+        } else if (Util.pointInsideRectUI(pos, UI.title.buttonCollection)) {
+            gameVar.scene = 'collection'
         }
     }
 

@@ -17,10 +17,16 @@ export class SceneSelect extends Scene {
         let ctx = gameVar.ctx
 
         Render.clearCanvas(canvas, ctx)
+        Render.fillTextUI(ctx, 'Select character', UI.select.textTitle)
+        Render.strokeRectUI(ctx, UI.select.buttonBack)
+        Render.strokeRectUI(ctx, UI.select.buttonStart)
+        Render.fillTextUI(ctx, 'Start', UI.select.textStart)
     }
 
     static pointerUp(gameVar, pos, button) {
-
+        if (Util.pointInsideRectUI(pos, UI.select.buttonBack)) {
+            gameVar.scene = 'title'
+        }
     }
 
     static keyDown(gameVar, key) {

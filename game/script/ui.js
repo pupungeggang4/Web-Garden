@@ -8,7 +8,10 @@ export class UI {
     }
 
     static select = {
-
+        textTitle: [20, 20],
+        buttonBack: [740, 20, 40, 40],
+        textStart: [640, 520],
+        buttonStart: [620, 500, 160, 80],
     }
 
     static battle = {
@@ -16,6 +19,7 @@ export class UI {
     }
 
     static collection = {
-
+        textTitle: [20, 20],
+        buttonBack: [740, 20, 40, 40]
     }
 }
