@@ -17,6 +17,7 @@ export class SceneBattle extends Scene {
         let ctx = gameVar.ctx
 
         Render.clearCanvas(canvas, ctx)
+        Render.strokeRectUI(ctx, UI.battle.buttonMenu)
     }
 
     static pointerUp(gameVar, pos, button) {
