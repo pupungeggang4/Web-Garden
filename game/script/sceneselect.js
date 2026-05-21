@@ -2,6 +2,9 @@ import {UI} from 'ui'
 import {Util} from 'util'
 
 import {GameVar} from 'gamevar'
+
+import {Render} from 'render'
+
 import {Scene} from 'scene'
 
 export class SceneSelect extends Scene {
@@ -13,8 +16,7 @@ export class SceneSelect extends Scene {
         let canvas = gameVar.canvas
         let ctx = gameVar.ctx
 
-        ctx.clearRect(0, 0, 800, 600)
-        ctx.fillRect(160, 160, 80, 80)
+        Render.clearCanvas(canvas, ctx)
     }
 
     static pointerUp(gameVar, pos, button) {
