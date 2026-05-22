@@ -55,7 +55,23 @@ export class SceneSelect extends Scene {
     }
 
     static keyDown(gameVar, key) {
+        if (gameVar.selectedCharacter === -1) {
+            gameVar.selectedCharacter = 0
+        } else {
+            if (key === 'ArrowUp' || key === 'ArrowDown') {
+                gameVar.selectedCharacter = (gameVar.selectedCharacter + 3) % 6
+            } else if (key === 'ArrowLeft') {
+                gameVar.selectedCharacter = (gameVar.selectedCharacter + 5) % 6
+            } else if (key === 'ArrowRight') {
+                gameVar.selectedCharacter = (gameVar.selectedCharacter + 1) % 6
+            }
+        }
 
+        if (key === 'Enter') {
+            if (gameVar.selectedCharacter != -1) {
+                gameVar.scene = 'battle'
+            }
+        }
     }
 
     static keyUp(gameVar, key) {

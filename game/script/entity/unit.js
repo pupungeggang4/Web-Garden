@@ -8,11 +8,6 @@ export class Unit {
         this.attack = 0
 
         this.speed = 0
-
         this.rect = new Rect2(0, 0, 40, 40)
-    }
-
-    setData(ID) {
-
     }
 }

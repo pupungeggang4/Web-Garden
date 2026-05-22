@@ -8,8 +8,4 @@ export class Card {
         this.name = ''
         this.description = []
     }
-
-    setData(ID) {
-
-    }
 }
