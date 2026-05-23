@@ -15,8 +15,11 @@ export class GameVar {
         this.dt = 0
         this.gameLoop = null
         this.scene = 'title'
+        this.state = ''
+        this.menu = false
 
         this.selectedTitle = 0
         this.selectedCharacter = -1
+        this.selectedMenu = 0
     }
 }

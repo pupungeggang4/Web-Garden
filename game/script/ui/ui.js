@@ -31,4 +31,14 @@ export class UI {
         textTitle: [20, 20],
         buttonBack: [740, 20, 40, 40]
     }
+
+    static menu = {
+        rect: [160, 120, 480, 320],
+        textPaused: [180, 140],
+        buttonResume: [160, 200, 480, 80],
+        textResume: [180, 220],
+        buttonSurrender: [160, 280, 480, 80],
+        textSurrender: [180, 300],
+        arrow: [[80, 200, 80, 80], [80, 280, 80, 80], [80, 360, 80, 80]],
+    }
 }
