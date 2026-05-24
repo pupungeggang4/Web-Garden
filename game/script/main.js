@@ -2,7 +2,6 @@ import {GameVar} from 'gamevar'
 import {GameHandler} from 'gamehandler'
 
 window.onload = main
-window.onerror = errorHandle
 document.getElementById('screen').oncontextmenu = rightClick
 
 function main() {
@@ -14,9 +13,6 @@ function main() {
         console.log(error)
         cancelAnimationFrame(gameVar.gameLoop)
     }
-}
-
-function errorHandle(msg, url, line, col, err) {
 }
 
 function rightClick() {

@@ -40,11 +40,21 @@ export class GameHandler {
 
     keyDown(event, gameVar) {
         let key = event.key
+        for (const k in gameVar.keyPressed) {
+            if (key === gameVar.keyMap[k]) {
+                gameVar.keyPressed[k] = true
+            }
+        }
         this.scene[gameVar.scene].keyDown(gameVar, key)
     }
 
     keyUp(event, gameVar) {
         let key = event.key
+        for (const k in gameVar.keyPressed) {
+            if (key === gameVar.keyMap[k]) {
+                gameVar.keyPressed[k] = false
+            }
+        }
         this.scene[gameVar.scene].keyUp(gameVar, key)
     }
 }

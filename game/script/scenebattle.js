@@ -1,8 +1,10 @@
 import {UI} from 'ui'
-import {Util} from 'util'
 
 import {GameVar} from 'gamevar'
+import {FieldHandler} from 'fieldhandler'
+
 import {Render} from 'render'
+import {Util} from 'util'
 
 import {Scene} from 'scene'
 import {MenuWindow} from 'menuwindow'
@@ -16,6 +18,10 @@ export class SceneBattle extends Scene {
         let ctx = gameVar.ctx
 
         Render.clearCanvas(canvas, ctx)
+
+        FieldHandler.render(gameVar, gameVar.field)
+
+        ctx.setTransform(1, 0, 0, 1, 0, 0)
         Render.strokeRectUI(ctx, UI.battle.buttonMenu)
         
         if (gameVar.menu === true) {

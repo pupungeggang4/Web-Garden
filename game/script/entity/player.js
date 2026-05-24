@@ -1,6 +1,6 @@
 import {Unit} from 'unit'
 
-class Player extends Unit {
+export class Player extends Unit {
     constructor() {
         super()
     }

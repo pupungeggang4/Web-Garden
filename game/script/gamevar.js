@@ -1,3 +1,5 @@
+import {Field} from 'field'
+
 export class GameVar {
     constructor() {
         this.canvas = document.getElementById('screen')
@@ -21,5 +23,7 @@ export class GameVar {
         this.selectedTitle = 0
         this.selectedCharacter = -1
         this.selectedMenu = 0
+
+        this.field = new Field()
     }
 }
