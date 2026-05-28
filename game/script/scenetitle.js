@@ -6,11 +6,11 @@ import {GameVar} from 'gamevar'
 import {Scene} from 'scene'
 
 export class SceneTitle extends Scene {
-    static update(gameVar) {
+    update(gameVar) {
 
     }
 
-    static render(gameVar) {
+    render(gameVar) {
         let canvas = gameVar.canvas
         let ctx = gameVar.ctx
 
@@ -26,7 +26,7 @@ export class SceneTitle extends Scene {
         Render.strokeRectUI(ctx, UI.title.arrow[gameVar.selectedTitle])
     }
 
-    static pointerUp(gameVar, pos, button) {
+    pointerUp(gameVar, pos, button) {
         if (Util.pointInsideRectUI(pos, UI.title.buttonStart)) {
             gameVar.scene = 'select'
             gameVar.selectedCharacter = -1
@@ -35,7 +35,7 @@ export class SceneTitle extends Scene {
         }
     }
 
-    static keyDown(gameVar, key) {
+    keyDown(gameVar, key) {
         if (key === 'ArrowUp') {
             gameVar.selectedTitle = (gameVar.selectedTitle + 2) % 3
         } else if (key === 'ArrowDown') {
@@ -48,6 +48,6 @@ export class SceneTitle extends Scene {
         }
     }
 
-    static keyUp(gameVar, key) {
+    keyUp(gameVar, key) {
     }
 }

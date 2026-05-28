@@ -1,23 +1,27 @@
 import {GameVar} from "gamevar"
 
 export class Scene {
-    static update(gameVar) {
+    constructor() {
 
     }
 
-    static render(gameVar) {
+    update(gameVar) {
 
     }
 
-    static pointerUp(gameVar, pos, button) {
+    render(gameVar) {
 
     }
 
-    static keyDown(gameVar, key) {
+    pointerUp(gameVar, pos, button) {
 
     }
 
-    static keyUp(gameVar, key) {
+    keyDown(gameVar, key) {
+
+    }
+
+    keyUp(gameVar, key) {
 
     }
 }

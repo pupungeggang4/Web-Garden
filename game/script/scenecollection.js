@@ -8,11 +8,11 @@ import {Render} from 'render'
 import {Scene} from 'scene'
 
 export class SceneCollection extends Scene {
-    static update(gameVar) {
+    update(gameVar) {
 
     }
 
-    static render(gameVar) {
+    render(gameVar) {
         let canvas = gameVar.canvas
         let ctx = gameVar.ctx
 
@@ -21,17 +21,17 @@ export class SceneCollection extends Scene {
         Render.strokeRectUI(ctx, UI.collection.buttonBack)
     }
 
-    static pointerUp(gameVar, pos, button) {
+    pointerUp(gameVar, pos, button) {
         if (Util.pointInsideRectUI(pos, UI.collection.buttonBack)) {
             gameVar.scene = 'title'
         }
     }
 
-    static keyDown(gameVar, key) {
+    keyDown(gameVar, key) {
 
     }
 
-    static keyUp(gameVar, key) {
+    keyUp(gameVar, key) {
 
     }
 }

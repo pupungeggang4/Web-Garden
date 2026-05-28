@@ -8,11 +8,11 @@ import {Render} from 'render'
 import {Scene} from 'scene'
 
 export class SceneSelect extends Scene {
-    static update(gameVar) {
+    update(gameVar) {
 
     }
 
-    static render(gameVar) {
+    render(gameVar) {
         let canvas = gameVar.canvas
         let ctx = gameVar.ctx
 
@@ -33,7 +33,7 @@ export class SceneSelect extends Scene {
         Render.fillTextUI(ctx, 'Start', UI.select.textStart)
     }
 
-    static pointerUp(gameVar, pos, button) {
+    pointerUp(gameVar, pos, button) {
         if (Util.pointInsideRectUI(pos, UI.select.buttonBack)) {
             gameVar.scene = 'title'
         }
@@ -54,7 +54,7 @@ export class SceneSelect extends Scene {
         }
     }
 
-    static keyDown(gameVar, key) {
+    keyDown(gameVar, key) {
         if (gameVar.selectedCharacter === -1) {
             gameVar.selectedCharacter = 0
         } else {
@@ -74,7 +74,7 @@ export class SceneSelect extends Scene {
         }
     }
 
-    static keyUp(gameVar, key) {
+    keyUp(gameVar, key) {
 
     }
 }

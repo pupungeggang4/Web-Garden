@@ -11,7 +11,7 @@ export class GameHandler {
         window.addEventListener('keydown', (event) => this.keyDown(event, gameVar), false)
         window.addEventListener('keyup', (event) => this.keyUp(event, gameVar), false)
         this.scene = {
-            'title': SceneTitle, 'select': SceneSelect, 'battle': SceneBattle, 'collection': SceneCollection,
+            'title': new SceneTitle(), 'select': new SceneSelect(), 'battle': new SceneBattle(), 'collection': new SceneCollection(),
         }
     }
 
