@@ -1,3 +1,5 @@
+import {Img} from 'asset'
+
 import {UI} from 'ui'
 import {Util} from 'util'
 
@@ -25,6 +27,14 @@ export class SceneSelect extends Scene {
             let col = i % 3
             let rect = [UI.select.buttonCharacterStart[0] + UI.select.buttonCharacterInterval[0] * col, UI.select.buttonCharacterStart[1] + UI.select.buttonCharacterInterval[1] * row, UI.select.buttonCharacterSize[0], UI.select.buttonCharacterSize[1]]
             Render.strokeRectUI(ctx, rect)
+        }
+
+        if (gameVar.selectedCharacter != -1) {
+            let row = Math.floor(gameVar.selectedCharacter / 3)
+            let col = gameVar.selectedCharacter % 3
+            let rect = [UI.select.buttonCharacterStart[0] + UI.select.buttonCharacterInterval[0] * col, UI.select.buttonCharacterStart[1] + UI.select.buttonCharacterInterval[1] * row, UI.select.buttonCharacterSize[0], UI.select.buttonCharacterSize[1]]
+            Render.drawImageUI(ctx, Img.selectFrame, rect)
+
         }
 
         Render.strokeRectUI(ctx, UI.select.areaDescription)

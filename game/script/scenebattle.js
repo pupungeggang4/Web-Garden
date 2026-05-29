@@ -8,8 +8,14 @@ import {Util} from 'util'
 
 import {Scene} from 'scene'
 import {MenuWindow} from 'menuwindow'
+import {PlayerUI} from 'playerui'
 
 export class SceneBattle extends Scene {
+    constructor() {
+        super()
+        this.playerUI = new PlayerUI()
+    }
+
     update(gameVar) {
     }
 
@@ -22,6 +28,7 @@ export class SceneBattle extends Scene {
         FieldHandler.render(gameVar, gameVar.field)
 
         ctx.setTransform(1, 0, 0, 1, 0, 0)
+        this.playerUI.render(gameVar)
         Render.strokeRectUI(ctx, UI.battle.buttonMenu)
         
         if (gameVar.menu === true) {
@@ -66,6 +73,9 @@ export class SceneBattle extends Scene {
                 if (gameVar.selectedMenu === 0) {
                     gameVar.menu = false
                 } else if (gameVar.selectedMenu === 1) {
+                    gameVar.menu = false
+                    gameVar.scene = 'title'
+                } else if (gameVar.selectedMenu === 2) {
                     gameVar.menu = false
                     gameVar.scene = 'title'
                 }

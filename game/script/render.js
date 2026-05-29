@@ -26,4 +26,8 @@ export class Render {
     static fillTextUI(ctx, text, pos) {
         ctx.fillText(text, pos[0], pos[1])
     }
+
+    static drawImageUI(ctx, img, pos) {
+        ctx.drawImage(img, pos[0], pos[1])
+    }
 }

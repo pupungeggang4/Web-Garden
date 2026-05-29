@@ -14,6 +14,8 @@ export class MenuWindow {
         Render.fillTextUI(ctx, 'Paused', UI.menu.textPaused)
         Render.strokeRectUI(ctx, UI.menu.buttonResume)
         Render.fillTextUI(ctx, 'Resume', UI.menu.textResume)
+        Render.strokeRectUI(ctx, UI.menu.buttonSave)
+        Render.fillTextUI(ctx, 'Save and Exit', UI.menu.textSave)
         Render.strokeRectUI(ctx, UI.menu.buttonSurrender)
         Render.fillTextUI(ctx, 'Surrender', UI.menu.textSurrender)
 

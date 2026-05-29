@@ -25,6 +25,16 @@ export class UI {
 
     static battle = {
         buttonMenu: [740, 20, 40, 40],
+        textLevel: [20, 20],
+        iconLife: [20, 40],
+        textLife: [64, 50],
+        barLife: [60, 44, 160, 32],
+        iconEnergy: [20, 80],
+        textEnergy: [64, 90],
+        barEnergy: [60, 84, 160, 32],
+
+        hand: [20, 500, 400, 80],
+        flowerSlot: [440, 500, 320, 80],
     }
 
     static collection = {
@@ -37,8 +47,10 @@ export class UI {
         textPaused: [180, 140],
         buttonResume: [160, 200, 480, 80],
         textResume: [180, 220],
-        buttonSurrender: [160, 280, 480, 80],
-        textSurrender: [180, 300],
+        buttonSave: [160, 280, 480, 80],
+        textSave: [180, 300],
+        buttonSurrender: [160, 360, 480, 80],
+        textSurrender: [180, 380],
         arrow: [[80, 200, 80, 80], [80, 280, 80, 80], [80, 360, 80, 80]],
     }
 }
